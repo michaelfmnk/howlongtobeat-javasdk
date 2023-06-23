@@ -12,9 +12,17 @@ import org.apache.http.HttpHeaders;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor
 public class HltbSearch {
     private final ObjectMapper om;
+
+    public HltbSearch(ObjectMapper om) {
+        this.om = om;
+    }
+
+    public HltbSearch() {
+        this(new ObjectMapper());
+    }
+
     private static final String BASE_URL = "https://howlongtobeat.com/";
     private static final String SEARCH_URL = BASE_URL + "api/search";
 

@@ -18,6 +18,10 @@ class SearchDemoTest {
 
         var games = test.search(List.of("red dead"));
         System.out.println(games);
+
+        for (HltbGame game : games) {
+            System.out.println(game.getGameName() + " " + game.getCompAll());
+        }
         Assertions.assertTrue(names(games).contains("Red Dead Redemption 2"));
 
 
